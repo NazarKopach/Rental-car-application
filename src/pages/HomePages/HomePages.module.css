@@ -1,0 +1,51 @@
+.iconClose {
+  fill: #407bff;
+}
+
+.home_page_title {
+  display: block;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 120%;
+  text-align: center;
+  color: white;
+  padding-top: 440px;
+}
+
+.home_page_info {
+  display: block;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+  text-align: center;
+  color: white;
+  padding-top: 16px;
+}
+
+.home_page_button {
+  display: block;
+  border-radius: 12px;
+  padding: 12px 99px;
+  width: 276px;
+  height: 44px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  color: white;
+  background-color: #3470ff;
+  border: none;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 40px;
+}
+
+.homePageContainer {
+  background-image: url(../../components/img/Hero_image.jpg);
+  background-size: cover;
+  background-position: center;
+  max-width: 1440px;
+  min-height: 700px;
+}
