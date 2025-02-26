@@ -1,0 +1,22 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  list-style: none;
+}
+
+.image {
+  width: 276px;
+  height: 268px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.galleryItem {
+  width: calc((100% - 32px) / 5);
+}
+
+.car_info {
+  display: flex;
+}

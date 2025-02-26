@@ -1,4 +1,4 @@
-import { Icon } from "../../components/Icon/Icon.jsx";
+import { Link } from "react-router-dom";
 import styles from "./HomePages.module.css";
 
 const HomePages = () => {
@@ -9,7 +9,9 @@ const HomePages = () => {
         <h3 className={styles.home_page_info}>
           Reliable and budget-friendly rentals for any journey
         </h3>
-        <button className={styles.home_page_button}>View Catalog</button>
+        <button type="button" className={styles.home_page_button}>
+          <Link to={"/catalog"}> View Catalog</Link>
+        </button>
       </div>
     </div>
   );

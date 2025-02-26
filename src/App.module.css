@@ -38,7 +38,7 @@ body {
 }
 
 .container {
-  max-width: 320px;
+  max-width: 1440px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -49,16 +49,4 @@ body {
 
 .active {
   color: #0b44cd;
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .container {
-    max-width: 1440px;
-  }
 }

@@ -40,11 +40,12 @@
   margin-right: auto;
   margin-left: auto;
   margin-top: 40px;
+  white-space: nowrap;
 }
 
 .homePageContainer {
-  background-image: url(../../components/img/Hero_image.jpg);
-  background-size: cover;
+  background-image: url(../../components//img/Hero_image.jpg);
+  background-size: fill;
   background-position: center;
   max-width: 1440px;
   min-height: 700px;

@@ -1,32 +1,16 @@
-import clsx from "clsx";
 import styles from "./App.module.css";
-import { NavLink, Route, Routes } from "react-router-dom";
 import HomePages from "./pages/HomePages/HomePages.jsx";
-import CatalogPages from "./pages/CatalogPages.jsx";
+import CatalogPages from "./pages/CatalogPages/CatalogPages.jsx";
 import InfoPages from "./pages/InfoPages.jsx";
+import SvgSprite from "./components/SvgSprite/SvgSprite.jsx";
+import Header from "./components/header/header.jsx";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div className={styles.container}>
-      <img src="../src/components/img/Logo.png" />
-
-      <NavLink
-        className={({ isActive }) =>
-          clsx(styles.link, isActive && styles.active)
-        }
-        to="/"
-      >
-        Home Page
-      </NavLink>
-      <NavLink
-        className={({ isActive }) =>
-          clsx(styles.link, isActive && styles.active)
-        }
-        to="./catalog"
-      >
-        Catalog Page
-      </NavLink>
-
+      <SvgSprite />
+      <Header />
       <div>
         <Routes>
           <Route path="/" element={<HomePages />} />
