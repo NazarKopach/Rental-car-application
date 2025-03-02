@@ -1,0 +1,17 @@
+.LoadMoreBtn {
+  display: block;
+  border: 1px solid #3470ff;
+  border-radius: 12px;
+  width: 156px;
+  height: 44px;
+  background-color: #fff;
+  white-space: nowrap;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--main);
+  margin-bottom: 124px;
+}

@@ -2,12 +2,11 @@
   display: flex;
   background: #f2f4f7;
   align-items: center;
-  justify-content: space-evenly;
-  gap: 960px;
+  justify-content: space-between;
   max-width: 1440px;
   height: 68px;
-  margin-right: auto;
-  margin-left: auto;
+  padding-right: 120px;
+  padding-left: 120px;
 }
 
 .link {

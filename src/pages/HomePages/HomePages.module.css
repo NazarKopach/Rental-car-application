@@ -43,6 +43,10 @@
   white-space: nowrap;
 }
 
+.home_page_button:hover {
+  background-color: #0b44cd;
+}
+
 .homePageContainer {
   background-image: url(../../components//img/Hero_image.jpg);
   background-size: fill;
