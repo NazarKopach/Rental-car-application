@@ -3,7 +3,7 @@ import styles from "./Header.module.css";
 import { Icon } from "../Icon/Icon";
 import { NavLink } from "react-router-dom";
 
-const Header = () => {
+export const Header = () => {
   return (
     <div className={styles.header_wrapper}>
       <Icon id="icon-Logo" width="106" height="16" />
@@ -28,5 +28,3 @@ const Header = () => {
     </div>
   );
 };
-
-export default Header;
