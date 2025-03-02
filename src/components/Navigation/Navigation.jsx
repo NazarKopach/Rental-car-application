@@ -1,9 +1,9 @@
 import clsx from "clsx";
-import styles from "./Header.module.css";
+import styles from "./Navigation.module.css";
 import { Icon } from "../Icon/Icon";
 import { NavLink } from "react-router-dom";
 
-export const Header = () => {
+export const Navigation = () => {
   return (
     <div className={styles.header_wrapper}>
       <Icon id="icon-Logo" width="106" height="16" />
