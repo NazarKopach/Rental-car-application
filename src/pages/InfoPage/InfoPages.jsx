@@ -5,7 +5,7 @@ import Loader from "../../components/Loader/Loader";
 import styles from "./InfoPage.module.css";
 import { Icon } from "../../components/Icon/Icon";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { addProfileSchema } from "../../utils/Schema";
+import { addProfileSchema } from "../../utils/schema.js";
 import toast, { Toaster } from "react-hot-toast";
 
 const InfoPages = () => {
