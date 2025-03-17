@@ -34,7 +34,41 @@
   left: 252px;
 }
 
+.catalog_select_div {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 12px;
+  width: 204px;
+  height: 44px;
+  background-color: #f7f7f7;
+  white-space: nowrap;
+  position: relative;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+/* .catalog_select_backdrop {
+  position: absolute;
+  background-color: white;
+  z-index: 10;
+  border: 1px solid #f7f7f7;
+  border-radius: 12px;
+  width: 204px;
+  height: 272px;
+  overflow: auto;
+}
+
+.catalog_select_icon {
+  border: none;
+  background: none;
+} */
+
 .catalog_input_select {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: gray;
   border-radius: 12px;
   padding: 12px 16px;
   width: 196px;

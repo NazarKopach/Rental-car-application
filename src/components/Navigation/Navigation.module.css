@@ -1,9 +1,8 @@
-.header_wrapper {
+.nav_wrapper {
   display: flex;
   background: #f2f4f7;
   align-items: center;
   justify-content: space-between;
-  max-width: 1440px;
   height: 68px;
   padding-right: 120px;
   padding-left: 120px;

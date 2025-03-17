@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 export const Navigation = () => {
   return (
-    <div className={styles.header_wrapper}>
+    <div className={styles.nav_wrapper}>
       <Icon id="icon-Logo" width="106" height="16" />
       <div className={styles.header_nav}>
         <NavLink

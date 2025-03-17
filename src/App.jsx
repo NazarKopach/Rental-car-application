@@ -6,20 +6,19 @@ import SvgSprite from "./components/SvgSprite/SvgSprite.jsx";
 
 import { Route, Routes } from "react-router-dom";
 import { Navigation } from "./components/Navigation/Navigation.jsx";
+import NotFoundPages from "./pages/NotFoundPages/NotFoundPages.jsx";
 
 function App() {
   return (
-    <div className={styles.container}>
-      <div>
-        <SvgSprite />
-        <Navigation />
-      </div>
-
-      <div>
+    <div>
+      <SvgSprite />
+      <Navigation />
+      <div className={styles.container}>
         <Routes>
           <Route path="/" element={<HomePages />} />
           <Route path="/catalog" element={<CatalogPages />} />
           <Route path="/catalog/:id" element={<InfoPages />} />
+          <Route path="*" element={<NotFoundPages />} />
         </Routes>
       </div>
     </div>
