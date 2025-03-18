@@ -213,7 +213,12 @@ const CatalogPages = () => {
                 </p>
               </div>
               <button type="button" className={styles.catalog_read_more_btn}>
-                <Link to={`/catalog/${item.id}`}>Read more</Link>
+                <Link
+                  className={styles.catalog_read_more_link}
+                  to={`/catalog/${item.id}`}
+                >
+                  Read more
+                </Link>
               </button>
             </li>
           );

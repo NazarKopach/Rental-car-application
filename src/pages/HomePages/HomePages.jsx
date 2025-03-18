@@ -10,7 +10,9 @@ const HomePages = () => {
           Reliable and budget-friendly rentals for any journey
         </h3>
         <button type="button" className={styles.home_page_button}>
-          <Link to={"/catalog"}> View Catalog</Link>
+          <Link className={styles.home_page_button_link} to={"/catalog"}>
+            View Catalog
+          </Link>
         </button>
       </div>
     </div>

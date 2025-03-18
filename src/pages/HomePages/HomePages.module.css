@@ -27,7 +27,6 @@
 .home_page_button {
   display: block;
   border-radius: 12px;
-  padding: 12px 99px;
   width: 276px;
   height: 44px;
   font-family: var(--font-family);
@@ -41,6 +40,10 @@
   margin-left: auto;
   margin-top: 40px;
   white-space: nowrap;
+}
+
+.home_page_button_link {
+  padding: 12px 84px;
 }
 
 .home_page_button:hover {
