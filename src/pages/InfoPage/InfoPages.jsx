@@ -7,6 +7,8 @@ import { Icon } from "../../components/Icon/Icon";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { addProfileSchema } from "../../utils/schema.js";
 import toast, { Toaster } from "react-hot-toast";
+import Flatpickr from "react-flatpickr";
+import "flatpickr/dist/flatpickr.min.css";
 
 const InfoPages = () => {
   const { id } = useParams();
@@ -73,60 +75,66 @@ const InfoPages = () => {
             validationSchema={addProfileSchema}
             onSubmit={handleSubmit}
           >
-            <Form className={styles.form}>
-              <h3 className={styles.form_title}>Book your car now</h3>
-              <p className={styles.form_p}>
-                Stay connected! We are always ready to help you.
-              </p>
-              <label className={styles.label}>
+            {({ setFieldValue, values }) => (
+              <Form className={styles.form}>
+                <h3 className={styles.form_title}>Book your car now</h3>
+                <p className={styles.form_p}>
+                  Stay connected! We are always ready to help you.
+                </p>
+                <label className={styles.label}>
+                  <Field
+                    type="text"
+                    name="name"
+                    className={styles.input}
+                    placeholder="Name"
+                  />
+                  <ErrorMessage
+                    className={styles.errorMessage}
+                    name="name"
+                    component="span"
+                  />
+                </label>
+                <label className={styles.label}>
+                  <Field
+                    className={styles.input}
+                    name="email"
+                    type="email"
+                    placeholder="example@com"
+                  />
+                  <ErrorMessage
+                    className={styles.errorMessage}
+                    name="email"
+                    component="span"
+                  />
+                </label>
+                <label className={styles.label}>
+                  <Flatpickr
+                    className={styles.input}
+                    placeholder="Booking date"
+                    options={{
+                      enableTime: false,
+                      dateFormat: "Y-m-d",
+                      minDate: "today",
+                    }}
+                    value={values.booking}
+                    onChange={(dates) =>
+                      setFieldValue(
+                        "booking",
+                        dates[0]?.toISOString().split("T")[0]
+                      )
+                    }
+                  />
+                </label>
                 <Field
-                  type="text"
-                  name="name"
-                  className={styles.input}
-                  placeholder="Name"
+                  name="textarea"
+                  className={styles.text_area}
+                  placeholder="Comments"
                 />
-                <ErrorMessage
-                  className={styles.errorMessage}
-                  name="name"
-                  component="span"
-                />
-              </label>
-              <label className={styles.label}>
-                <Field
-                  className={styles.input}
-                  name="email"
-                  type="email"
-                  placeholder="exampel@com"
-                />
-                <ErrorMessage
-                  className={styles.errorMessage}
-                  name="email"
-                  component="span"
-                />
-              </label>
-              <label className={styles.label}>
-                <Field
-                  className={styles.input}
-                  name="booking"
-                  type="date"
-                  placeholder="Booking date"
-                />
-                <ErrorMessage
-                  className={styles.errorMessage}
-                  name="booking"
-                  component="span"
-                />
-              </label>
-              <Field
-                as="textarea"
-                name="textarea"
-                className={styles.text_area}
-                placeholder="Comments"
-              />
-              <button className={styles.button_info_send} type="submit">
-                Send
-              </button>
-            </Form>
+                <button className={styles.button_info_send} type="submit">
+                  Send
+                </button>
+              </Form>
+            )}
           </Formik>
         </div>
       </div>
