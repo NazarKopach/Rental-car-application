@@ -6,15 +6,16 @@
   list-style: none;
 }
 
+.catalog_input_div {
+  display: inline-flex;
+  flex-direction: column;
+}
+
 .image {
   width: 276px;
   height: 268px;
   border-radius: 10px;
   object-fit: cover;
-}
-
-.galleryItem {
-  width: calc((100% - 32px) / 5);
 }
 
 .car_info {
@@ -157,4 +158,17 @@
 
 .catalog_read_more_btn:hover {
   background-color: #0b44cd;
+}
+
+@media screen and (min-width: 768px) {
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    list-style: none;
+  }
+}
+
+@media screen and (min-width: 1440px) {
 }
