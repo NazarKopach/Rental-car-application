@@ -7,8 +7,10 @@
 }
 
 .catalog_input_div {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
+  gap: 16px;
+  align-items: center;
 }
 
 .image {
@@ -56,7 +58,7 @@
   color: gray;
   border-radius: 12px;
   padding: 12px 16px;
-  width: 196px;
+  width: 276px;
   height: 44px;
   background-color: #f7f7f7;
   border: none;
@@ -64,7 +66,7 @@
 
 .catalog_input_right {
   border-radius: 0 12px 12px 0;
-  width: 160px;
+  width: 112px;
   height: 38px;
   background-color: #f7f7f7;
   border: none;
@@ -74,7 +76,7 @@
 
 .catalog_input_left {
   border-radius: 12px 0 0 12px;
-  width: 160px;
+  width: 112px;
   height: 38px;
   background-color: #f7f7f7;
   border: none;
@@ -88,7 +90,7 @@
   font-size: 12px;
   line-height: 133%;
   color: gray;
-  margin-top: 84px;
+  margin-top: 10px;
   margin-bottom: 8px;
 }
 
@@ -103,10 +105,10 @@
 .catalog_search_btn {
   border-radius: 12px;
   padding: 12px 51px;
-  width: 156px;
+  width: 276px;
   height: 44px;
-  margin-top: 108px;
-  margin-bottom: 58px;
+  margin-top: 10px;
+  margin-bottom: 8px;
   background-color: #3470ff;
   border: none;
   font-weight: 600;
@@ -117,13 +119,6 @@
 
 .catalog_search_btn:hover {
   background-color: #0b44cd;
-}
-
-.catalog_input_div {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-  justify-content: center;
 }
 
 .model_span {
@@ -161,12 +156,36 @@
 }
 
 @media screen and (min-width: 768px) {
-  .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+  .catalog_input_div {
+    flex-direction: row;
+  }
+
+  .catalog_input_div {
     justify-content: center;
-    list-style: none;
+    align-items: start;
+  }
+
+  .catalog_text_info {
+    margin-top: 84px;
+    margin-bottom: 8px;
+  }
+
+  .catalog_search_btn {
+    margin-top: 108px;
+    margin-bottom: 58px;
+    width: 156px;
+  }
+
+  .catalog_input_select {
+    width: 196px;
+  }
+
+  .catalog_input_right {
+    width: 160px;
+  }
+
+  .catalog_input_left {
+    width: 160px;
   }
 }
 
