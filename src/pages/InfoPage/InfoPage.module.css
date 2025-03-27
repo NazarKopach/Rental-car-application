@@ -1,13 +1,12 @@
 .info_page_div {
   display: flex;
+  flex-direction: column;
 }
 
 .info_img {
-  max-height: 512px;
   max-width: 640px;
   border-radius: 19px;
-  margin-top: 84px;
-  margin-left: 120px;
+  margin-top: 50px;
 }
 
 .info_img_form_div {
@@ -16,20 +15,16 @@
 }
 
 .info_page_description_div {
-  margin-top: 104px;
-  margin-left: 32px;
 }
 
 .info_page_description {
   display: flex;
-  margin-top: 32px;
-  width: 488px;
+  max-width: 488px;
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 16px;
   line-height: 125%;
   color: #101828;
-  margin-bottom: 68px;
 }
 
 .info_page_description_brand {
@@ -98,8 +93,7 @@
   border: 1px solid #dadde1;
   border-radius: 10px;
   padding: 20px;
-  margin-left: 120px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .contact_form_div {
@@ -125,7 +119,7 @@
 .input {
   border-radius: 12px;
   padding-left: 20px;
-  width: 556px;
+  max-width: 556px;
   height: 48px;
   background-color: #f7f7f7;
   border: none;
@@ -139,7 +133,7 @@
 
 .text_area {
   border-radius: 12px;
-  width: 556px;
+  max-width: 556px;
   height: 88px;
   padding-top: 12px;
   padding-left: 20px;
@@ -154,7 +148,7 @@
   border-radius: 12px;
   background-color: #3470ff;
   border: none;
-  width: 156px;
+  min-width: 156px;
   height: 44px;
   font-family: var(--font-family);
   font-weight: 600;
@@ -172,7 +166,30 @@
   font-size: 12px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 960px) {
+  .info_page_div {
+    flex-direction: row;
+  }
+
+  .info_page_description {
+    margin-bottom: 68px;
+    margin-top: 32px;
+  }
+
+  .info_img {
+    margin-top: 84px;
+    margin-left: 120px;
+  }
+
+  .form {
+    margin-left: 120px;
+    margin-top: 40px;
+  }
+
+  .info_page_description_div {
+    margin-top: 104px;
+    margin-left: 32px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
