@@ -107,24 +107,23 @@ const InfoPages = () => {
                     component="span"
                   />
                 </label>
-                <label className={styles.label}>
-                  <Flatpickr
-                    className={styles.input}
-                    placeholder="Booking date"
-                    options={{
-                      enableTime: false,
-                      dateFormat: "Y-m-d",
-                      minDate: "today",
-                    }}
-                    value={values.booking}
-                    onChange={(dates) =>
-                      setFieldValue(
-                        "booking",
-                        dates[0]?.toISOString().split("T")[0]
-                      )
-                    }
-                  />
-                </label>
+
+                <Flatpickr
+                  className={styles.input}
+                  placeholder="Booking date"
+                  options={{
+                    enableTime: false,
+                    dateFormat: "Y-m-d",
+                    minDate: "today",
+                  }}
+                  value={values.booking}
+                  onChange={(dates) =>
+                    setFieldValue(
+                      "booking",
+                      dates[0]?.toISOString().split("T")[0]
+                    )
+                  }
+                />
                 <Field
                   name="textarea"
                   className={styles.text_area}
