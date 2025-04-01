@@ -61,80 +61,80 @@ const InfoPages = () => {
   const { city, country } = getCityAndCountry(carById.address);
   return (
     <div className={styles.info_page_div}>
-      {loader && <Loader />}
-      <Toaster position="top-center" reverseOrder={false} duration="5000" />
-      <div className={styles.info_img_form_div}>
-        <img
-          src={carById.img}
-          alt={carById.description}
-          className={styles.info_img}
-        />
-        <div className={styles.contact_form_div}>
-          <Formik
-            initialValues={initialValues}
-            validationSchema={addProfileSchema}
-            onSubmit={handleSubmit}
-          >
-            {({ setFieldValue, values }) => (
-              <Form className={styles.form}>
-                <h3 className={styles.form_title}>Book your car now</h3>
-                <p className={styles.form_p}>
-                  Stay connected! We are always ready to help you.
-                </p>
-                <label className={styles.label}>
-                  <Field
-                    type="text"
-                    name="name"
-                    className={styles.input}
-                    placeholder="Name"
-                  />
-                  <ErrorMessage
-                    className={styles.errorMessage}
-                    name="name"
-                    component="span"
-                  />
-                </label>
-                <label className={styles.label}>
-                  <Field
-                    className={styles.input}
-                    name="email"
-                    type="email"
-                    placeholder="example@com"
-                  />
-                  <ErrorMessage
-                    className={styles.errorMessage}
-                    name="email"
-                    component="span"
-                  />
-                </label>
+      <div className={styles.info_img_form_wrapper}>
+        <div className={styles.info_img_form_div}>
+          <img
+            src={carById.img}
+            alt={carById.description}
+            className={styles.info_img}
+          />
+          <div className={styles.contact_form_div}>
+            <Formik
+              initialValues={initialValues}
+              validationSchema={addProfileSchema}
+              onSubmit={handleSubmit}
+            >
+              {({ setFieldValue, values }) => (
+                <Form className={styles.form}>
+                  <h3 className={styles.form_title}>Book your car now</h3>
+                  <p className={styles.form_p}>
+                    Stay connected! We are always ready to help you.
+                  </p>
+                  <label className={styles.label}>
+                    <Field
+                      type="text"
+                      name="name"
+                      className={styles.input}
+                      placeholder="Name"
+                    />
+                    <ErrorMessage
+                      className={styles.errorMessage}
+                      name="name"
+                      component="span"
+                    />
+                  </label>
+                  <label className={styles.label}>
+                    <Field
+                      className={styles.input}
+                      name="email"
+                      type="email"
+                      placeholder="example@com"
+                    />
+                    <ErrorMessage
+                      className={styles.errorMessage}
+                      name="email"
+                      component="span"
+                    />
+                  </label>
 
-                <Flatpickr
-                  className={styles.input}
-                  placeholder="Booking date"
-                  options={{
-                    enableTime: false,
-                    dateFormat: "Y-m-d",
-                    minDate: "today",
-                  }}
-                  value={values.booking}
-                  onChange={(dates) =>
-                    setFieldValue(
-                      "booking",
-                      dates[0]?.toISOString().split("T")[0]
-                    )
-                  }
-                />
-                <Field
-                  name="textarea"
-                  className={styles.text_area}
-                  placeholder="Comments"
-                />
-                <button className={styles.button_info_send} type="submit">
-                  Send
-                </button>
-              </Form>
-            )}
-          </Formik>
+                  <Flatpickr
+                    className={styles.input}
+                    placeholder="Booking date"
+                    options={{
+                      enableTime: false,
+                      dateFormat: "Y-m-d",
+                      minDate: "today",
+                    }}
+                    value={values.booking}
+                    onChange={(dates) =>
+                      setFieldValue(
+                        "booking",
+                        dates[0]?.toISOString().split("T")[0]
+                      )
+                    }
+                  />
+                  <Field
+                    name="textarea"
+                    className={styles.text_area}
+                    placeholder="Comments"
+                  />
+                  <button className={styles.button_info_send} type="submit">
+                    Send
+                  </button>
+                </Form>
+              )}
+            </Formik>
+          </div>
         </div>
       </div>
 
@@ -208,6 +208,8 @@ const InfoPages = () => {
           </ul>
         </div>
       </div>
+      {loader && <Loader />}
+      <Toaster position="top-center" reverseOrder={false} duration="5000" />
     </div>
   );
 };
