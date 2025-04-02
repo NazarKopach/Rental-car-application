@@ -66,21 +66,19 @@
 
 .catalog_input_right {
   border-radius: 0 12px 12px 0;
-  width: 112px;
+  max-width: 138px;
   height: 38px;
   background-color: #f7f7f7;
   border: none;
-  padding-left: 24px;
   border: right 1px solid gray;
 }
 
 .catalog_input_left {
   border-radius: 12px 0 0 12px;
-  width: 112px;
+  max-width: 138px;
   height: 38px;
   background-color: #f7f7f7;
   border: none;
-  padding-left: 24px;
 }
 
 .catalog_text_info {

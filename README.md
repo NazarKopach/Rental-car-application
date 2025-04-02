@@ -1,8 +1,17 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚗 Rental Car
 
-Currently, two official plugins are available:
+Rental Car - this is the frontend part of a web application for a car rental company. Users can browse a catalog of available cars, filter them by criteria, add to favorites, and book.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Deploy on https://rental-car-application.vercel.app/
+- Repository on GitHub https://github.com/NazarKopach/Rental-car-application
+
+MAIN FUNCTION
+
+📋 Home page - banner and a button to go to the catalog.
+🚘 Catalog page - list of cars with filters (brand, price, mileage).
+🔎 Info page - detailed information and rental form.
+❤ Selected - saving the car in local storage.
+⬅ Pagination - loading cars from the backend via "Loade more".
+⌛ Loader - indicator for API requests.
