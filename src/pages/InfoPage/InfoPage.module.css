@@ -143,6 +143,7 @@
 
 .text_area {
   border-radius: 12px;
+  min-width: 100%;
   max-width: 576px;
   height: 88px;
   padding-top: 12px;
