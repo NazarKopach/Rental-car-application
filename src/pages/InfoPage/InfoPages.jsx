@@ -106,7 +106,6 @@ const InfoPages = () => {
                       component="span"
                     />
                   </label>
-
                   <Flatpickr
                     className={styles.input}
                     placeholder="Booking date"

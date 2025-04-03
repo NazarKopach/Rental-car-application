@@ -129,7 +129,7 @@
 .input {
   border-radius: 12px;
   padding-left: 20px;
-  max-width: 576px;
+  width: 576px;
   height: 48px;
   background-color: #f7f7f7;
   border: none;
